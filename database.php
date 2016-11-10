@@ -1,14 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "progweb";
-
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-if(!$conn){
-  die("Connection failed ".mysqli_connect_error());
-}
+include 'db.php';
 
 $query = "SELECT * FROM paper";
 $result = mysqli_query($conn, $query);
